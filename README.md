@@ -1,18 +1,18 @@
-# Offroad Semantic Segmentation 🚗🌿
+# Offroad Semantic Segmentation 
 
 Off-road scene understanding using deep learning. This project uses U-Net with a ResNet34 backbone to perform pixel-wise classification of terrain elements like trees, sky, rocks, and more.
 
-## 🚀 Features
+##  Features
 - 10-class semantic segmentation
 - Lightweight U-Net (ResNet34 encoder)
 - Data augmentation (flip)
 - Combined loss (CrossEntropy + Dice)
 - Prediction visualization with class percentages
   
-## 📂 Dataset
+##  Dataset
 This project uses the Offroad Segmentation Dataset containing labeled images of outdoor environments with 10 semantic classes.
 
-## 🧠 Model Code
+##  Model Code
 
 ```python
 import os
@@ -202,18 +202,18 @@ with torch.no_grad():
         plt.show()
 ```
 
-## ⚙️ Requirements
+##  Requirements
 - Python
 - PyTorch
 - OpenCV
 - segmentation_models_pytorch
 
-## ▶️ How to Run
+##  How to Run
 1. Download dataset
 2. Update dataset path in code
 3. Run the script
 
-## 📊 Output
+##  Output
 <img width="1600" height="611" alt="image" src="https://github.com/user-attachments/assets/90313940-70c2-4d84-bdcf-1a43285cab32" />
 Image 1 GT Percentages:
 Trees: 90.55%
@@ -334,17 +334,17 @@ Rocks: 1.41%
 Landscape: 0.00%
 Sky: 0.00%
 
-## 📉 Training Performance
+##  Training Performance
 
 - Trained for 50 epochs  
 - Initial Loss: 2.49 → Final Loss: 1.11  
 - Best Validation Accuracy: 77.80% (Epoch 42)  
 The model shows steady improvement in early epochs and stabilizes after 30~40 epochs, indicating good convergence.
 
-## 📈 Observations
+##  Observations
 The model performs well on dominant classes like Trees but struggles with minority classes such as Flowers and Logs due to class imbalance. We improved the baseline by incorporating data augmentation, class weighting, and Dice loss, along with a validation split to better evaluate generalization.
 
-## 🚀 Future Work
+##  Future Work
 - Improve performance on minority classes
 - Use larger dataset
 - Train on GPU for better accuracy
